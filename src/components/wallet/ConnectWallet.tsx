@@ -8,9 +8,7 @@ import {
   ModalOverlay,
   ModalContent,
   ModalBody,
-  Flex,
   Image,
-  Link,
   Text,
   Center,
 } from "@chakra-ui/react";
