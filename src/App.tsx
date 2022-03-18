@@ -1,10 +1,9 @@
 import React from "react";
 import { Route, Routes, Outlet } from "react-router-dom";
-// import logo from "./logo.svg";
-import { ConnectWallet } from "@/components/wallet";
+import { ConnectWallet, SwitchNetwork } from "@/components/wallet";
 import { LandingPage } from "@/pages";
 
-import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
+import { Box, Flex, Spacer, Heading } from "@chakra-ui/react";
 
 const App = () => {
   return (
@@ -21,9 +20,19 @@ export default App;
 const AppLayout = () => {
   return (
     <Box m="4">
-      <Box className="">
-        <ConnectWallet />
-      </Box>
+      <Flex>
+        <Box p="2">
+          <Heading size="md">App</Heading>
+        </Box>
+        <Spacer />
+        <Box>
+          <Flex>
+            <SwitchNetwork />
+            <ConnectWallet />
+          </Flex>
+        </Box>
+      </Flex>
+
       <main>
         <Box m="4">
           <Outlet />
